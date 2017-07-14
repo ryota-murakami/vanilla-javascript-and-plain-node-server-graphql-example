@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+
+before_script:
+  - npm install eslint
+
+script:
+  - node_modules/karma/bin/eslint server.js

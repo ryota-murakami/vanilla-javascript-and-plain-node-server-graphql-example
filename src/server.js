@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { graphql, buildSchema } from 'graphql'
 
 // Construct a schema, using GraphQL schema language

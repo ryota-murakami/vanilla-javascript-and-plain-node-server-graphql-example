@@ -2,9 +2,12 @@
   "name": "graphql-node-minimum-exercise",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src"
   },
   "dependencies": {
     "graphql": "^0.10.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0"
   }
 }

@@ -1,1 +1,1 @@
-# hello-graphql
+# GraphQL node Minimum Exercise

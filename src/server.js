@@ -48,15 +48,15 @@ var root = {
 
 var app = express()
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'))
+})
+
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
   graphiql: true,
 }))
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'))
-})
 
 app.listen(4000)
 console.log('Running a GraphQL API server at localhost:4000/graphql')

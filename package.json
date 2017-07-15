@@ -2,7 +2,8 @@
   "name": "graphql-node-minimum-exercise",
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "server": "node src/server.js"
   },
   "dependencies": {
     "express": "^4.15.3",

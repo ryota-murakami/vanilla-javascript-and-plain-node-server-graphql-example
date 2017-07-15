@@ -1,4 +1,5 @@
 var express = require('express')
+var path = require("path")
 var graphqlHTTP = require('express-graphql')
 var {buildSchema} = require('graphql')
 
@@ -53,7 +54,9 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true,
 }))
 
-// TODO index.html rooting
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'))
+})
 
 app.listen(4000)
 console.log('Running a GraphQL API server at localhost:4000/graphql')

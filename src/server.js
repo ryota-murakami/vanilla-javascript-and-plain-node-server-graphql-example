@@ -13,7 +13,7 @@ var schema = buildSchema(`
 
   type Query {
     getDie(numSides: Int): RandomDie
-    getTen: Int
+    getSimpleRandomInteger: Int
   }
 `)
 
@@ -41,8 +41,8 @@ var root = {
   getDie: function ({numSides}) {
     return new RandomDie(numSides || 6)
   },
-  getTen: function () {
-    return 10
+  getSimpleRandomInteger: function () {
+    return Math.round(Math.random() * 1000)
   }
 }
 

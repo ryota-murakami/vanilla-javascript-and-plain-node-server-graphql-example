@@ -12,6 +12,7 @@ var schema = buildSchema(`
 
   type Query {
     getDie(numSides: Int): RandomDie
+    getTen: Int
   }
 `)
 
@@ -38,6 +39,9 @@ class RandomDie {
 var root = {
   getDie: function ({numSides}) {
     return new RandomDie(numSides || 6)
+  },
+  getTen: function () {
+    return 10
   }
 }
 

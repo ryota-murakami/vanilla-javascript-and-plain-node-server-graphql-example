@@ -9,3 +9,13 @@ http://graphql.org/graphql-js/
 ```
 node src/server.js
 ```
+
+### Browser Access
+```
+http://localhost:4000/
+```
+
+### GraphQL Browser Editor
+```
+http://localhost:4000/graphql
+```

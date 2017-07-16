@@ -8,9 +8,9 @@
 
   /* event binding to dom */
 
-  // toggle
+  // toggle FadeIn/FadeOut
   run_simple_query_btn.addEventListener(CLICK, function () {
-    if (simple_query_profile.style.opacity == 0) {
+    if (isShow(simple_query_profile)) {
       requestAnimationFrame(function () { simple_query_profile.style.opacity = 1 });
     } else if (simple_query_profile.style.opacity == 1) {
       requestAnimationFrame(function () { simple_query_profile.style.opacity = 0 });
@@ -18,4 +18,9 @@
       alert('CSS setting error; at #js-manipulate-dom_simple-query-profile');
     }
   })
+
+
+  function isShow (simple_query_profile) {
+    return simple_query_profile.style.opacity == 0
+  }
 })()

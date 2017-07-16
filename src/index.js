@@ -18,11 +18,11 @@
   run_simple_query_btn.addEventListener(CLICK, function () {
     switch (true) {
       case isHide(simple_query_profile):
-        requestAnimationFrame(function () { simple_query_profile.style.opacity = 1 })
+        fadeIn(simple_query_profile)
         break
 
       case isShow(simple_query_profile):
-        requestAnimationFrame(function () { simple_query_profile.style.opacity = 0 })
+        fadeOut(simple_query_profile)
         break
 
       default:
@@ -45,4 +45,21 @@
   function isHide (elm) {
     return elm.style.opacity === '0'
   }
+
+  /**
+   * @param {external:Node} node
+   * @returns {void}
+   */
+  function fadeIn (elm) {
+    requestAnimationFrame(function () { elm.style.opacity = 1 })
+  }
+
+  /**
+   * @param {external:Node} node
+   * @returns {void}
+   */
+  function fadeOut (elm) {
+    requestAnimationFrame(function () { elm.style.opacity = 0 })
+  }
+
 })()

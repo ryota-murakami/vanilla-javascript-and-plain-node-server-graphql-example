@@ -25,8 +25,10 @@
     const elm = simple_query_profile
     switch (true) {
       case isHide(elm):
-        const promise = executeGraphQL('getSimpleRandomInteger')
-        dataBind(promise, simple_query_profile_result)
+        dataBind(
+          executeGraphQL('getSimpleRandomInteger'),
+          simple_query_profile_result
+        )
         fadeIn(elm)
         break
 

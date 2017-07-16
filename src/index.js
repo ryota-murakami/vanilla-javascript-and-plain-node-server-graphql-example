@@ -33,7 +33,7 @@
         break
 
       case isShow(elm):
-        // TODO remove to HTML result data
+        dataClear_simple_query()
         fadeOut(elm)
         break
 
@@ -123,5 +123,11 @@
    */
   function queryLiteral (query) {
     return `{ ${query} }`
+  }
+
+  function dataClear_simple_query() {
+    // Execute Query
+    simple_query_profile_execute_query.innerText = ""
+    simple_query_profile_result.innerText = ""
   }
 })()

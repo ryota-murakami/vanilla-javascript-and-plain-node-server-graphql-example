@@ -25,8 +25,8 @@
     const elm = simple_query_profile
     switch (true) {
       case isHide(elm):
-        executeGraphQL('getSimpleRandomInteger')
-        // TODO bind to HTML result data
+        const promise = executeGraphQL('getSimpleRandomInteger')
+        dataBind_simple_query_profile(promise)
         fadeIn(elm)
         break
 
@@ -74,7 +74,7 @@
 
   /**
    * @param {string} query
-   * @returns {json} result
+   * @returns {Promise}
    */
   function executeGraphQL (query) {
     if (!query.length) alert('executeGraphQL(): need query string')
@@ -83,7 +83,7 @@
     header.append('Content-Type', 'application/json')
     header.append('Accept', 'application/json')
 
-    const result = fetch(GraphQL, {
+    return fetch(GraphQL, {
       method: POST,
       body: JSON.stringify({query: `{ ${query} }`}),
       headers: header
@@ -98,8 +98,16 @@
       .then(json => {
         return json
       })
+  }
 
-    console.log(result)
-    return result
+  /**
+   * @param {Promise} promise
+   * @returns {void}
+   */
+  function dataBind_simple_query_profile (promise) {
+    promise
+      .then((json) => {
+        console.log(json)
+      })
   }
 })()

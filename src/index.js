@@ -9,6 +9,7 @@
   const CLICK = 'click'
   const GraphQL = 'http://localhost:4000/graphql'
   const POST = 'post'
+  const getSimpleRandomInteger = 'getSimpleRandomInteger'
 
   /* dom cache */
   const run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn')
@@ -26,7 +27,7 @@
     switch (true) {
       case isHide(elm):
         dataBind(
-          executeGraphQL('getSimpleRandomInteger'),
+          executeGraphQL(getSimpleRandomInteger),
           simple_query_profile_result
         )
         fadeIn(elm)

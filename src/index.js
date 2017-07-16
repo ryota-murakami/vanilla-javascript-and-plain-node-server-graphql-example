@@ -11,6 +11,8 @@
   /* dom cache */
   var run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn')
   var simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile')
+  var simple_query_profile_execute_query = document.querySelector('#js-manipulate-dom_simple-query-profile-execute-query')
+  var simple_query_profile_result = document.querySelector('#js-manipulate-dom_simple-query-profile-result')
 
   /*
     event binding to dom

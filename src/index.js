@@ -21,10 +21,13 @@
     var elm = simple_query_profile
     switch (true) {
       case isHide(elm):
+        // TODO execute GraphQL, recive result
+        // TODO bind to HTML result data
         fadeIn(elm)
         break
 
       case isShow(elm):
+        // TODO remove to HTML result data
         fadeOut(elm)
         break
 

@@ -89,6 +89,11 @@
       headers: header
     })
       .then(response => {
+        if (!response.ok) {
+          alert('faild executeGraphQL(). debug info to console.log()')
+          console.log(response)
+        }
+
         return response.json()
       })
       .then(json => {

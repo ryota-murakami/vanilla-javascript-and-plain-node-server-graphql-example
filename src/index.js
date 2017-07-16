@@ -1,10 +1,12 @@
 (function () {
-  // const
+  /* const */
   var CLICK = 'click';
 
-  // dom cache
+  /* dom cache */
   var run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn');
   var simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile');
+
+  /* event binding to dom */
 
   // toggle
   run_simple_query_btn.addEventListener(CLICK, function () {

@@ -1,5 +1,5 @@
-#js-manipulate-dom_run-simple-query-btn {
+#js-manipulate-dom_simple-query-profile {
     display: none;
     opacity: 0;
-    transition: 200;
+    transition: 2s;
 }

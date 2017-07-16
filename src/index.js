@@ -16,7 +16,9 @@
   const simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile')
   const simple_query_profile_execute_query = document.querySelector('#js-manipulate-dom_simple-query-profile-execute-query')
   const simple_query_profile_result = document.querySelector('#js-manipulate-dom_simple-query-profile-result')
-  const simple_query_profile_http_profile = document.querySelector('#js-manipulate-dom_simple-query-profile-http-profile')
+  const simple_query_profile_http_profile_url_method = document.querySelector('#js-manipulate-dom_simple-query-profile-http-profile-url-method')
+  const simple_query_profile_http_profile_request_payload = document.querySelector('#js-manipulate-dom_simple-query-profile-http-profile-request-payload')
+
 
   /*
     event binding to dom
@@ -117,7 +119,11 @@
       })
 
     // HTTP Profile
-    // TODO
+    // TODO dinamic
+    simple_query_profile_http_profile_url_method.innerHTML =
+      "<h5>POST http://localhost:4000/graphql</h5>"
+    simple_query_profile_http_profile_request_payload.innerHTML =
+      "<h5>Request Payload: {query: \"{ getSimpleRandomInteger }\"}</h5>"
   }
 
   /**
@@ -132,6 +138,7 @@
     // Execute Query
     simple_query_profile_execute_query.innerText = ''
     simple_query_profile_result.innerText = ''
-    simple_query_profile_http_profile.innerText = ''
+    simple_query_profile_http_profile_url_method.innerText = ''
+    simple_query_profile_http_profile_request_payload.innerText = ''
   }
 })()

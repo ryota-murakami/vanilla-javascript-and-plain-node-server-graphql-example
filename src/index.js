@@ -16,6 +16,7 @@
   const simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile')
   const simple_query_profile_execute_query = document.querySelector('#js-manipulate-dom_simple-query-profile-execute-query')
   const simple_query_profile_result = document.querySelector('#js-manipulate-dom_simple-query-profile-result')
+  const simple_query_profile_http_profile = document.querySelector('#js-manipulate-dom_simple-query-profile-http-profile')
 
   /*
     event binding to dom
@@ -114,6 +115,9 @@
       .then((json) => {
         simple_query_profile_result.innerText = JSON.stringify(json.data)
       })
+
+    // HTTP Profile
+    // TODO
   }
 
   /**
@@ -128,5 +132,6 @@
     // Execute Query
     simple_query_profile_execute_query.innerText = ""
     simple_query_profile_result.innerText = ""
+    simple_query_profile_http_profile.innerText = ""
   }
 })()

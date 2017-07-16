@@ -7,6 +7,8 @@
 (function () {
   /* const */
   var CLICK = 'click'
+  var GraphQL = 'http://localhost:4000/graphql'
+  var POST = 'post'
 
   /* dom cache */
   var run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn')
@@ -23,7 +25,8 @@
     var elm = simple_query_profile
     switch (true) {
       case isHide(elm):
-        // TODO execute GraphQL, recive result
+        // TODO execute GraphQL
+        executeGraphQL('getSimpleRandomInteger')
         // TODO bind to HTML result data
         fadeIn(elm)
         break
@@ -70,4 +73,27 @@
     requestAnimationFrame(function () { elm.style.opacity = 0 })
   }
 
+  /**
+   * @param {string} query
+   * @returns {json} result
+   */
+  function executeGraphQL (query) {
+    if (!query.length) alert('executeGraphQL(): need query string')
+
+    var header = new Headers()
+    header.append('Content-Type', 'application/json')
+    header.append('Accept', 'application/json')
+
+    fetch(GraphQL, {
+      method: POST,
+      body: JSON.stringify({query: `{ ${query} }`}),
+      headers: header
+    })
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (json) {
+        console.log(json)
+      })
+  }
 })()

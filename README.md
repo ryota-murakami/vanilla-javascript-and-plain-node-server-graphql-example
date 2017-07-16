@@ -7,6 +7,13 @@ http://graphql.org/graphql-js/
 
 ## Guide
 
+### install
+```
+git clone git@github.com:ryota-murakami/graphql-node-minimum-exercise.git
+cd graphql-node-minimum-exercise
+yarn install
+```
+
 ### Run Server
 ```
 node src/server.js

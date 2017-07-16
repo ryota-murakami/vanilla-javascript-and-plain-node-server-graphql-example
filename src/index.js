@@ -1,3 +1,11 @@
+/**
+ * A node in the DOM tree.
+ *
+ * @external Node
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Node Node}
+ */
+
+
 (function () {
   /* const */
   var CLICK = 'click';
@@ -10,17 +18,28 @@
 
   // toggle FadeIn/FadeOut
   run_simple_query_btn.addEventListener(CLICK, function () {
-    if (isShow(simple_query_profile)) {
+    if (isHide(simple_query_profile)) {
       requestAnimationFrame(function () { simple_query_profile.style.opacity = 1 });
-    } else if (simple_query_profile.style.opacity == 1) {
+    } else if (isShow(simple_query_profile)) {
       requestAnimationFrame(function () { simple_query_profile.style.opacity = 0 });
     } else {
       alert('CSS setting error; at #js-manipulate-dom_simple-query-profile');
     }
   })
 
+  /**
+   * @param {external:Node} node
+   * @returns {boolean}
+   */
+  function isShow (elm) {
+    return elm.style.opacity === "1"
+  }
 
-  function isShow (simple_query_profile) {
-    return simple_query_profile.style.opacity == 0
+  /**
+   * @param {external:Node} node
+   * @returns {boolean}
+   */
+  function isHide (elm) {
+    return elm.style.opacity === "0"
   }
 })()

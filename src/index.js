@@ -26,7 +26,7 @@
     switch (true) {
       case isHide(elm):
         const promise = executeGraphQL('getSimpleRandomInteger')
-        dataBind_simple_query_profile(promise, simple_query_profile_result)
+        dataBind(promise, simple_query_profile_result)
         fadeIn(elm)
         break
 
@@ -105,7 +105,7 @@
    * @param {external:Node} node
    * @returns {void}
    */
-  function dataBind_simple_query_profile (promise, elm) {
+  function dataBind (promise, elm) {
     promise
       .then((json) => {
         elm.innerText = JSON.stringify(json.data)

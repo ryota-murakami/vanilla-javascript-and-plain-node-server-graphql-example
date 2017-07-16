@@ -8,16 +8,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav-extended">
-        <div class="'nav-content">
-            <span class="nav-title">GraphQL node Minimum Exercise</span>
+<nav class="nav-extended">
+    <div class="'nav-content">
+        <span class="nav-title">GraphQL node Minimum Exercise</span>
+    </div>
+</nav>
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col s12">
+            <a id="js-event-listener-run-simple-query-btn" class="waves-effect waves-light btn-large"><i
+                    class="material-icons left">play_arrow</i>Run Simple Query</a>
         </div>
-    </nav>
-    <div class="container" style="margin-top: 30px">
-        <div class="row">
-            <div class="col s12">
-                <a id="js-event-listener-run-simple-query-btn" class="waves-effect waves-light btn-large"><i class="material-icons left">play_arrow</i>Run Simple Query</a>
-            </div>
+        <div id="js-manipulate-dom-run-simple-query-btn">
             <!--Execute Query-->
             <div class="col s12">
                 <h3>Execute Query</h3>
@@ -44,13 +46,14 @@
             </div>
         </div>
     </div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
-    <script>
-      (function () {
-        // TODO add eventlistener to #js-event-listener-run-simple-query-btn
-      })
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+<script>
+  (function () {
+    // TODO add eventlistener to #js-event-listener-run-simple-query-btn
+  })
+</script>
 </body>
 </html>

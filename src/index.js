@@ -6,23 +6,23 @@
  */
 (function () {
   /* const */
-  var CLICK = 'click'
-  var GraphQL = 'http://localhost:4000/graphql'
-  var POST = 'post'
+  const CLICK = 'click'
+  const GraphQL = 'http://localhost:4000/graphql'
+  const POST = 'post'
 
   /* dom cache */
-  var run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn')
-  var simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile')
-  var simple_query_profile_execute_query = document.querySelector('#js-manipulate-dom_simple-query-profile-execute-query')
-  var simple_query_profile_result = document.querySelector('#js-manipulate-dom_simple-query-profile-result')
+  const run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn')
+  const simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile')
+  const simple_query_profile_execute_query = document.querySelector('#js-manipulate-dom_simple-query-profile-execute-query')
+  const simple_query_profile_result = document.querySelector('#js-manipulate-dom_simple-query-profile-result')
 
   /*
     event binding to dom
   */
 
   // toggle FadeIn/FadeOut
-  run_simple_query_btn.addEventListener(CLICK, function () {
-    var elm = simple_query_profile
+  run_simple_query_btn.addEventListener(CLICK, () => {
+    const elm = simple_query_profile
     switch (true) {
       case isHide(elm):
         // TODO execute GraphQL
@@ -80,7 +80,7 @@
   function executeGraphQL (query) {
     if (!query.length) alert('executeGraphQL(): need query string')
 
-    var header = new Headers()
+    let header = new Headers()
     header.append('Content-Type', 'application/json')
     header.append('Accept', 'application/json')
 
@@ -89,10 +89,10 @@
       body: JSON.stringify({query: `{ ${query} }`}),
       headers: header
     })
-      .then(function (response) {
+      .then(response => {
         return response.json()
       })
-      .then(function (json) {
+      .then(json => {
         console.log(json)
       })
   }

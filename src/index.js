@@ -19,7 +19,6 @@
   const simple_query_profile_http_profile_url_method = document.querySelector('#js-manipulate-dom_simple-query-profile-http-profile-url-method')
   const simple_query_profile_http_profile_request_payload = document.querySelector('#js-manipulate-dom_simple-query-profile-http-profile-request-payload')
 
-
   /*
     event binding to dom
   */
@@ -28,19 +27,19 @@
   run_simple_query_btn.addEventListener(CLICK, () => {
     const elm = simple_query_profile
     switch (true) {
-      case isHide(elm):
-        const promise = executeGraphQL(getSimpleRandomInteger)
-        dataBind_simple_query(promise)
-        fadeIn(elm)
-        break
+    case isHide(elm):
+      const promise = executeGraphQL(getSimpleRandomInteger)
+      dataBind_simple_query(promise)
+      fadeIn(elm)
+      break
 
-      case isShow(elm):
-        dataClear_simple_query()
-        fadeOut(elm)
-        break
+    case isShow(elm):
+      dataClear_simple_query()
+      fadeOut(elm)
+      break
 
-      default:
-        alert('CSS setting error; at #js-manipulate-dom_simple-query-profile')
+    default:
+      alert('CSS setting error; at #js-manipulate-dom_simple-query-profile')
     }
   })
 
@@ -121,9 +120,9 @@
     // HTTP Profile
     // TODO dinamic
     simple_query_profile_http_profile_url_method.innerHTML =
-      "<h5>POST http://localhost:4000/graphql</h5>"
+      '<h5>POST http://localhost:4000/graphql</h5>'
     simple_query_profile_http_profile_request_payload.innerHTML =
-      "<h5>Request Payload: {query: \"{ getSimpleRandomInteger }\"}</h5>"
+      '<h5>Request Payload: {query: "{ getSimpleRandomInteger }"}</h5>'
   }
 
   /**

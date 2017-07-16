@@ -26,6 +26,7 @@ module.exports = {
             "error",
             "never"
         ],
-        "no-console": "off"
+        "no-console": "off",
+        "no-case-declarations": "off"
     }
 };

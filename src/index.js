@@ -12,17 +12,20 @@
   var run_simple_query_btn = document.querySelector('#js-event-listener_run-simple-query-btn')
   var simple_query_profile = document.querySelector('#js-manipulate-dom_simple-query-profile')
 
-  /* event binding to dom */
+  /*
+    event binding to dom
+  */
 
   // toggle FadeIn/FadeOut
   run_simple_query_btn.addEventListener(CLICK, function () {
+    var elm = simple_query_profile
     switch (true) {
-      case isHide(simple_query_profile):
-        fadeIn(simple_query_profile)
+      case isHide(elm):
+        fadeIn(elm)
         break
 
-      case isShow(simple_query_profile):
-        fadeOut(simple_query_profile)
+      case isShow(elm):
+        fadeOut(elm)
         break
 
       default:

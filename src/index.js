@@ -4,8 +4,6 @@
  * @external Node
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Node Node}
  */
-
-
 (function () {
   /* const */
   var CLICK = 'click';

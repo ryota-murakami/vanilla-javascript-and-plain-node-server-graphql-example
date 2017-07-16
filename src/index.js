@@ -83,21 +83,23 @@
     header.append('Content-Type', 'application/json')
     header.append('Accept', 'application/json')
 
-    fetch(GraphQL, {
+    const result = fetch(GraphQL, {
       method: POST,
       body: JSON.stringify({query: `{ ${query} }`}),
       headers: header
     })
       .then(response => {
-        if (!response.ok) {
-          alert('faild executeGraphQL(). debug info to console.log()')
-          console.log(response)
-        }
-
         return response.json()
       })
-      .then(json => {
-        console.log(json)
+      .catch(error => {
+        alert('faild executeGraphQL(). debug info to console.log()')
+        console.log(error)
       })
+      .then(json => {
+        return json
+      })
+
+    console.log(result)
+    return result
   }
 })()

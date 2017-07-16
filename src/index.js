@@ -25,7 +25,6 @@
     const elm = simple_query_profile
     switch (true) {
       case isHide(elm):
-        // TODO execute GraphQL
         executeGraphQL('getSimpleRandomInteger')
         // TODO bind to HTML result data
         fadeIn(elm)

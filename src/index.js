@@ -109,7 +109,7 @@
   function dataBind_simple_query (promise) {
     // Execute Query
     simple_query_profile_execute_query.innerText = queryLiteral(getSimpleRandomInteger)
-    
+
     // Result
     promise
       .then((json) => {
@@ -128,10 +128,10 @@
     return `{ ${query} }`
   }
 
-  function dataClear_simple_query() {
+  function dataClear_simple_query () {
     // Execute Query
-    simple_query_profile_execute_query.innerText = ""
-    simple_query_profile_result.innerText = ""
-    simple_query_profile_http_profile.innerText = ""
+    simple_query_profile_execute_query.innerText = ''
+    simple_query_profile_result.innerText = ''
+    simple_query_profile_http_profile.innerText = ''
   }
 })()

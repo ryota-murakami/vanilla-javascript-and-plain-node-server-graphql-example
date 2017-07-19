@@ -14,13 +14,11 @@ cd graphql-node-minimum-exercise
 yarn install
 ```
 
-### Run Server
+### Run App
 ```
-node src/server.js
-```
-
-### Browser Access
-```
+// Run Server
+yarn server
+// Browser Access
 http://localhost:4000/
 ```
 

@@ -118,7 +118,7 @@
       })
 
     // HTTP Profile
-    // TODO dinamic
+    // TODO dynamic
     simple_query_profile_http_profile_url_method.innerHTML =
       '<h5>POST http://localhost:4000/graphql</h5>'
     simple_query_profile_http_profile_request_payload.innerHTML =

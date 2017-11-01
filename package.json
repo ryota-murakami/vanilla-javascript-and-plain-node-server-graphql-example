@@ -6,6 +6,7 @@
     "server": "node src/server.js"
   },
   "dependencies": {
+    "codecov": "^3.0.0",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.3"

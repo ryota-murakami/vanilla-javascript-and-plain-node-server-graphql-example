@@ -1,6 +1,7 @@
-# GraphQL node Minimum Exercise [![Build Status](https://travis-ci.org/ryota-murakami/graphql-node-minimum-exercise.svg?branch=master)](https://travis-ci.org/ryota-murakami/graphql-node-minimum-exercise)
+# GraphQL node Minimum Exercise
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ryota-murakami/graphql-node-minimum-exercise.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/ryota-murakami/graphql-node-minimum-exercise.svg?branch=master)](https://travis-ci.org/ryota-murakami/graphql-node-minimum-exercise)
 
 ![example](demo.gif)
 

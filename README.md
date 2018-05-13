@@ -1,7 +1,5 @@
 # GraphQL node Minimum Exercise
 
-![example](demo.gif)
-
 referenced
 http://graphql.org/graphql-js/
 

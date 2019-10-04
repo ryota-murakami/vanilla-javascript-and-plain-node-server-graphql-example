@@ -5,7 +5,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prettier": "prettier --write src/*",
-    "server": "node src/server.js"
+    "server": "nodemon src/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -16,6 +16,7 @@
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^1.19.3",
     "prettier": "^1.18.2"
   }
 }

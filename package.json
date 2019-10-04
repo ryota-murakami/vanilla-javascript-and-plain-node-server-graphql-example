@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
+    "prettier": "prettier --write src/*",
     "server": "node src/server.js"
   },
   "dependencies": {

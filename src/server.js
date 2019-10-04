@@ -1,7 +1,7 @@
 var express = require('express')
 var path = require('path')
 var graphqlHTTP = require('express-graphql')
-var {buildSchema} = require('graphql')
+var { buildSchema } = require('graphql')
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
@@ -19,15 +19,15 @@ var schema = buildSchema(`
 
 // This class implements the RandomDie GraphQL type
 class RandomDie {
-  constructor (numSides) {
+  constructor(numSides) {
     this.numSides = numSides
   }
 
-  rollOnce () {
+  rollOnce() {
     return 1 + Math.floor(Math.random() * this.numSides)
   }
 
-  roll ({numRolls}) {
+  roll({ numRolls }) {
     var output = []
     for (var i = 0; i < numRolls; i++) {
       output.push(this.rollOnce())
@@ -38,10 +38,10 @@ class RandomDie {
 
 // The root provides the top-level API endpoints
 var root = {
-  getDie: function ({numSides}) {
+  getDie: function({ numSides }) {
     return new RandomDie(numSides || 6)
   },
-  getSimpleRandomInteger: function () {
+  getSimpleRandomInteger: function() {
     return Math.round(Math.random() * 1000)
   }
 }
@@ -50,15 +50,18 @@ var app = express()
 
 app.use(express.static(__dirname))
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'))
 })
 
-app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: root,
-  graphiql: true,
-}))
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema: schema,
+    rootValue: root,
+    graphiql: true
+  })
+)
 
 app.listen(4000)
 console.log('Running a GraphQL API server at localhost:4000/graphql')

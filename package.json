@@ -5,7 +5,8 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prettier": "prettier --write src/*",
-    "server": "nodemon src/server.js"
+    "server": "nodemon src/server.js",
+    "browser-sync": "browser-sync start --proxy 'localhost:4000' --files 'src/*.css' 'src/*.html'"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -13,10 +14,12 @@
     "graphql": "^0.13.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "nodemon": "^1.19.3",
     "prettier": "^1.18.2"
+
   }
 }

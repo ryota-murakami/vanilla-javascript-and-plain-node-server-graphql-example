@@ -64,4 +64,4 @@ app.use(
 )
 
 app.listen(3999)
-console.log('Running a GraphQL API server at localhost:4000/graphql')
+console.log('Running a GraphQL API server at localhost:3999/graphql')

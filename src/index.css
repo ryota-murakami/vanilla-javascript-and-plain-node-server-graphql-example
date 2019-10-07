@@ -1,0 +1,15 @@
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.root-container {
+  padding: 0 40px;
+}
+
+.header-root {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

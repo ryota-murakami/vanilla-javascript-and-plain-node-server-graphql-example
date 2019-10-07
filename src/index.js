@@ -76,9 +76,7 @@
    * @returns {void}
    */
   function fadeIn(elm) {
-    requestAnimationFrame(function() {
       elm.style.opacity = 1
-    })
   }
 
   /**
@@ -86,9 +84,7 @@
    * @returns {void}
    */
   function fadeOut(elm) {
-    requestAnimationFrame(function() {
       elm.style.opacity = 0
-    })
   }
 
   /**

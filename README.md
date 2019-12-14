@@ -1,4 +1,4 @@
-# ⚠️ DEV
+# ⚠️ [WIP]
 Uncompleted work.
 
 # GraphQL node Minimum Exercise
